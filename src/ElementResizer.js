@@ -200,7 +200,9 @@ ElementResizer.propTypes = {
 
 ElementResizer.defaultProps = {
     alignmentX: 0.5,
-    alignmentY: 0.5
+    alignmentY: 0.5,
+    overflowVisible: false,
+    scaleMode: ScaleMode.COVER
 };
 
 export default ElementResizer;
