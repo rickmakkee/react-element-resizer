@@ -1,4 +1,4 @@
-# react-element-resizer
+# react-element-resizer ![dependencies](https://img.shields.io/david/rickmakkee/react-element-resizer.svg?style=flat-square) [![GitHub issues](https://img.shields.io/github/issues/rickmakkee/react-element-resizer.svg?style=flat-square)](https://github.com/rickmakkee/react-element-resizer/issues) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/rickmakkee/react-element-resizer/master/LICENSE)
 A small React component adding the functionality of `object-fit: cover/contain` to all elements and browsers.
 
 ## Usage
@@ -86,10 +86,10 @@ To view the examples
 ```shell
 npm run dev
 ```
-Then open `http://localhost:8080/react-video-cover`
+Then open `http://localhost:8080`
 
 To build the Component as published to npm:
 ```shell
-npm run build
+npm run release
 ```
 You can find the results in the `dist` folder.
