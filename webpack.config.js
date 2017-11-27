@@ -5,6 +5,7 @@ const packageJson = require('./package.json');
 
 module.exports = function () {
     return {
+        target: 'node',
         entry: {
             index: path.join(__dirname, 'src/ElementResizer.js'),
         },
@@ -13,7 +14,7 @@ module.exports = function () {
             path: path.join(__dirname, 'dist'),
                 filename: '[name].js',
                 library: packageJson.name,
-                libraryTarget: 'umd',
+                libraryTarget: 'commonjs2',
         },
 
         module: {
@@ -33,20 +34,7 @@ module.exports = function () {
 
         plugins: [
             // Clean dist folder
-            new CleanWebpackPlugin(['dist/*.*']),
-
-            //CommonChunksPlugin will now extract all the common modules from vendor and main bundles
-            //https://medium.com/@adamrackis/vendor-and-code-splitting-in-webpack-2-6376358f1923
-            new webpack.optimize.CommonsChunkPlugin({
-                name: 'vendor',
-                minChunks(module) {
-                    return module.context && module.context.indexOf('node_modules') !== -1;
-                },
-            }),
-
-            new webpack.optimize.CommonsChunkPlugin({
-                name: 'manifest'
-            })
+            new CleanWebpackPlugin(['dist/*.*'])
         ]
     };
 };

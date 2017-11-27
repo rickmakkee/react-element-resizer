@@ -16,8 +16,8 @@ class Example extends React.Component {
                 height: '500px',
                 transform: 'translate(-50%, -50%)'
             }}>
-                <ElementResizer scaleMode={ScaleMode.COVER} elementWidth={1920} elementHeight={1080} overflowVisible>
-                    <img src="https://placeimg.com/1920/1080/nature" alt=""/>
+                <ElementResizer scaleMode={ScaleMode.COVER} elementWidth={1024} elementHeight={768} overflowVisible>
+                    <img src="https://placeimg.com/1024/768/nature" alt=""/>
                 </ElementResizer>
 
                 <div style={{
