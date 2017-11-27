@@ -1,5 +1,8 @@
 node_modules
-examples/dist/bundle.js
-coverage
+examples
+DS_Store
+git
+npmrc
+npm-debug.log
 
 .idea
