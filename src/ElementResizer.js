@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 
-export const ScaleMode = {
+const ScaleMode = {
     CONTAIN: 'contain',
     COVER: 'cover',
     ALIGN_ONLY: 'align-only'

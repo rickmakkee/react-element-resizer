@@ -12,16 +12,21 @@ module.exports = function () {
 
         output: {
             path: path.join(__dirname, 'dist'),
-                filename: '[name].js',
-                library: packageJson.name,
-                libraryTarget: 'commonjs2',
+            filename: '[name].js',
+            library: packageJson.name,
+            libraryTarget: 'umd',
+        },
+
+        resolve: {
+            extensions: ['.js'],
+            modules: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules')]
         },
 
         module: {
-            rules: [
+            loaders: [
                 {
-                    test: /.jsx?$/,
-                    exclude: /node_modules/,
+                    test: /.js?$/,
+                    exclude: [/node_modules/],
                     include: path.join(__dirname, 'src'),
                     use: [
                         {
@@ -30,6 +35,10 @@ module.exports = function () {
                     ]
                 },
             ]
+        },
+
+        externals: {
+            'react': 'React'
         },
 
         plugins: [
