@@ -5,8 +5,8 @@ A small React component adding the functionality of `object-fit: cover/contain` 
 
 To use this component wrap this component around the element you want to position. See example component.
 ```jsx
-var React = require('react');
-var ElementResizer = require('react-element-resizer');
+import React from 'react';
+import ElementResizer from 'react-element-resizer';
 
 class MyComponent extends Component {
     render() {
